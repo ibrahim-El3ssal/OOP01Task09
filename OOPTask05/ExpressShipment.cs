@@ -29,19 +29,19 @@ namespace OOPTask05
             }
         }
 
-        public override decimal EstimatedCost 
-        {
+        //public override decimal EstimatedCost 
+        //{
 
-            get { return DeliveryFee + (Weight * 5) + ExtraFee;  }
-        }
-        public override void PrintShipment()
-        {
-            Console.WriteLine("Express Shipment\n");
-            Console.WriteLine($"Tracking Code : {TrackingCode}");
-            Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
-            Console.WriteLine("--------------------------------------------------");
-        }
+        //    get { return DeliveryFee + (Weight * 5) + ExtraFee;  }
+        //}
+        //public override void PrintShipment()
+        //{
+        //    Console.WriteLine("Express Shipment\n");
+        //    Console.WriteLine($"Tracking Code : {TrackingCode}");
+        //    Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
+        //    Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        //    Console.WriteLine("--------------------------------------------------");
+        //}
 
         public string GetTrackingStatus()
         {

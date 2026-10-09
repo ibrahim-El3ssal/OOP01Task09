@@ -1,4 +1,5 @@
 ﻿using OOPTask05;
+using OOPTask05.Interface;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOPTask05
@@ -43,9 +44,21 @@ namespace OOPTask05
 
             #endregion
 
-            #region In Main
+            #region In Main 
+            ///1  Object Copying
+            DeliveryAddress address1 = new DeliveryAddress("Cairo", "Tahrir St.", 10);
+            Shipment shipment1 = new Shipment("SH-101", "Electronics", 2.5m, 100.0m, address1);
 
+            Console.WriteLine("--- 1. Demonstrating Reference Assignment (=) ---");
 
+            Console.WriteLine($" before modifying : {shipment1.Description}");
+
+            Shipment shipment2 = shipment1;
+
+            shipment2.Description = "Laptops";
+
+            Console.WriteLine($"shipment1 after modifying : {shipment1.Description}");
+            Console.WriteLine($"shipment2 after modifying : {shipment2.Description}");
             #endregion
 
             Console.ReadLine();

@@ -31,10 +31,10 @@ namespace OOPTask05
                     _customsFee = value;
             }
         }
-        public override decimal EstimatedCost 
-        {
-            get{ return DeliveryFee + (Weight * 5) + CustomsFee; }
-        }
+        //public override decimal EstimatedCost 
+        //{
+        //    get{ return DeliveryFee + (Weight * 5) + CustomsFee; }
+        //}
 
 
 
@@ -44,16 +44,16 @@ namespace OOPTask05
             CustomsFee = customsFee;
         }
 
-        public override void PrintShipment()
-        {
-            Console.WriteLine("International Shipment\n");
-            //base.PrintShipment();
-            Console.WriteLine($"Tracking Code : {TrackingCode}");
-            Console.WriteLine($"Destination Country : {DestinationCountry}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        //public override void PrintShipment()
+        //{
+        //    Console.WriteLine("International Shipment\n");
+        //    //base.PrintShipment();
+        //    Console.WriteLine($"Tracking Code : {TrackingCode}");
+        //    Console.WriteLine($"Destination Country : {DestinationCountry}");
+        //    Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
             
-            Console.WriteLine("--------------------------------------------------");
-        }
+        //    Console.WriteLine("--------------------------------------------------");
+        //}
 
 
         public string GetTrackingStatus()
