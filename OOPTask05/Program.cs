@@ -49,7 +49,7 @@ namespace OOPTask05
             DeliveryAddress address1 = new DeliveryAddress("Cairo", "Tahrir St.", 10);
             Shipment shipment1 = new Shipment("SH-101", "Electronics", 2.5m, 100.0m, address1);
 
-            Console.WriteLine("--- 1. Demonstrating Reference Assignment (=) ---");
+            Console.WriteLine("1.Demonstrating Reference Assignment\n");
 
             Console.WriteLine($" before modifying : {shipment1.Description}");
 
@@ -59,6 +59,22 @@ namespace OOPTask05
 
             Console.WriteLine($"shipment1 after modifying : {shipment1.Description}");
             Console.WriteLine($"shipment2 after modifying : {shipment2.Description}");
+
+            //2  Shallow Copy
+            Console.WriteLine("\n2.Demonstrating ShallowCopy()\n");
+
+            Shipment shipment3 = shipment1.ShallowCopy();
+            shipment3.Description = "Smartphones";
+
+            Console.WriteLine($"shipment1 after modifying : {shipment1.Description}");
+            Console.WriteLine($"shipment3 after modifying : {shipment3.Description}");
+
+
+            shipment3.Destination.City = "Alexandria";
+            Console.WriteLine( $"\nshipment1 after modifying : {shipment1.Destination.City}");
+            Console.WriteLine( $"shipment2 after modifying : {shipment2.Destination.City}");
+            Console.WriteLine( $"shipment3 after modifying : {shipment3.Destination.City}");
+
             #endregion
 
             Console.ReadLine();

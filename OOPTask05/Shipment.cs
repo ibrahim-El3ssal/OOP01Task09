@@ -114,6 +114,11 @@ namespace OOPTask05
             );
         }
 
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
     }
 
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOPTask05
 {
-    internal struct DeliveryAddress
+    internal class DeliveryAddress
     {
         public string City { get; set; }
         public string Street { get; set; }
