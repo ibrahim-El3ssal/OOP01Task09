@@ -119,6 +119,21 @@ namespace OOPTask05
             return (Shipment)this.MemberwiseClone();
         }
 
+        public Shipment DeepCopy()
+        {
+            DeliveryAddress newAddress = new DeliveryAddress(
+            this.Destination.City,
+            this.Destination.Street,
+            this.Destination.BuildingNumber
+                );
+            return new Shipment(
+                this.TrackingCode,
+                this.Description,
+                this.Weight,
+                this.DeliveryFee,
+                newAddress
+            );
+        }
     }
 
 

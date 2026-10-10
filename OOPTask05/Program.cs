@@ -75,6 +75,22 @@ namespace OOPTask05
             Console.WriteLine( $"shipment2 after modifying : {shipment2.Destination.City}");
             Console.WriteLine( $"shipment3 after modifying : {shipment3.Destination.City}");
 
+            //2  Shallow Copy
+            Console.WriteLine("\n2.Demonstrating DeepCopy()\n");
+
+            Shipment shipment4 = shipment1.DeepCopy();
+            shipment4.Destination.City = "Giza";
+            shipment1.Destination.City = "aswan";
+
+            Console.WriteLine($"\nshipment1 before modifying : {shipment1.Destination.City}");
+            Console.WriteLine($"shipment2   before modifying : {shipment2.Destination.City}");
+            Console.WriteLine($"shipment3   before modifying : {shipment3.Destination.City}");
+            Console.WriteLine($"shipment4   before modifying : {shipment4.Destination.City}");
+
+            bool isSameAddressObject = object.ReferenceEquals(shipment1.Destination, shipment4.Destination);
+            Console.WriteLine($"Same Address object?\t{isSameAddressObject}\t\t{isSameAddressObject}");
+
+
             #endregion
 
             Console.ReadLine();
